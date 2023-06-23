@@ -50,35 +50,42 @@
         padding: 12px 24px;
         font-size: 18px;
         font-weight: 600;
-        text-decoration: none;
         opacity: 0;
+
+        a {
+          text-decoration: none;
+        }
 
         cursor: pointer;
 
-        animation: fadeInUp 0.4s 5.2s linear forwards;
+        animation: fadeInUp 1s 5.2s linear forwards;
 
         &.btn__contact {
-          color: #fff;
           border-radius: 8px;
-          border: 2px solid #5a69fa;
+          background-color: #5a69fa;
 
           transition: all 0.3s;
 
+          a {
+            color: #fff;
+          }
+
           &:hover {
-            background-color: #5a69fa;
+            background-color: #3041e1;
           }
         }
 
         &.btn__cv {
-          color: #000;
           border-radius: 8px;
-          background-color: #0fd875;
+          border: 2px solid #0fd875;
+          color: #fff;
 
           transition: all 0.3s;
 
           &:hover {
-            background-color: #086a39;
-            color: #fff;
+            background-color: #0fd875;
+
+            color: #000;
           }
         }
       }
@@ -89,6 +96,9 @@
     position: relative;
     width: 350px;
     height: 350px;
+    opacity: 0;
+
+    animation: fadeIn 1s 5s forwards;
 
     transition: all 0.3s;
     &:hover::after {
@@ -115,7 +125,7 @@
       width: 200px;
       height: 200px;
       border-color: #3f3fd7 transparent transparent #3f3fd7;
-      border-width: 4px;
+      border-width: 10px;
       border-style: solid;
 
       transition: all 0.3s;
@@ -129,7 +139,7 @@
       width: 200px;
       height: 200px;
       border-color: transparent #3f3fd7 #3f3fd7 transparent;
-      border-width: 4px;
+      border-width: 10px;
       border-style: solid;
 
       transition: all 0.3s;
@@ -140,7 +150,9 @@
       width: 350px;
       height: 350px;
 
-      background-color: #ffffffa3;
+      box-shadow: -32px 30px 2px 0px rgba(25, 24, 24, 0.56862);
+
+      background-color: #ffffff;
       transition: all 0.3s;
       position: relative;
       // border-radius: 8px;

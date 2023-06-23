@@ -1,6 +1,7 @@
 import "./Home.scss";
 import personalImg from "../assets/personal-image.png";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -30,7 +31,9 @@ const Home = () => {
           <span>+</span> Entrepreneurial mindset
         </p> */}
         <div className="btns__box">
-          <button className="btn btn__contact">Contact Me</button>
+          <button className="btn btn__contact">
+            <Link to="contact">Contact Me</Link>
+          </button>
           <button className="btn btn__cv">Upload Resume</button>
         </div>
       </div>
