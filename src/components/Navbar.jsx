@@ -30,6 +30,11 @@ const Navbar = () => {
             onClick={() => setHideMenu(false)}
           />
 
+          <li className="home">
+            <NavLink to="/" onClick={() => setHideMenu(false)}>
+              Home
+            </NavLink>
+          </li>
           <li className="about">
             <NavLink to="about" onClick={() => setHideMenu(false)}>
               About
