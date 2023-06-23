@@ -6,11 +6,33 @@
 
   min-height: 90vh;
 
+  @media (max-width: 1111px) {
+    gap: 64px;
+  }
+
+  @media (max-width: 991px) {
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  @media (max-width: 664px) {
+    gap: 0px;
+  }
+
   .info {
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+
     .name {
       color: #fff;
       font-size: 32px;
       letter-spacing: 1.25px;
+
+      @media (max-width: 664px) {
+        font-size: 28px;
+      }
     }
 
     .job__title {
@@ -18,6 +40,10 @@
       color: #5a69fa;
 
       display: inline-block;
+
+      @media (max-width: 664px) {
+        font-size: 32px;
+      }
     }
 
     .second__title {
@@ -26,6 +52,10 @@
       font-weight: 600;
       margin-top: 10px;
       display: inline-block;
+
+      @media (max-width: 664px) {
+        font-size: 22px;
+      }
 
       span {
         color: #5a69fa;
@@ -37,8 +67,11 @@
     .btns__box {
       display: flex;
       align-items: center;
-      // justify-content: center;
       gap: 24px;
+
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
 
       margin-top: 42px;
 
@@ -79,6 +112,7 @@
           border-radius: 8px;
           border: 2px solid #0fd875;
           color: #fff;
+          text-decoration: none;
 
           transition: all 0.3s;
 
@@ -101,20 +135,16 @@
     animation: fadeIn 1s 5s forwards;
 
     transition: all 0.3s;
-    &:hover::after {
-      top: 0 !important;
-      left: 0;
-      width: 380px;
-      height: 380px;
-      z-index: 1;
-    }
-    &:hover::before {
-      bottom: 0 !important;
-      right: 0;
-      width: 380px;
-      height: 380px;
 
-      z-index: 1;
+    // &:hover::after {
+    //   transform: rotateX(-180deg) translateY(-120%);
+    // }
+    // &:hover::before {
+    //   transform: rotateX(-180deg) translateY(120%);
+    // }
+
+    &:hover .img__box {
+      filter: grayscale(0);
     }
 
     &::after {
@@ -129,6 +159,10 @@
       border-style: solid;
 
       transition: all 0.3s;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
 
     &::before {
@@ -143,6 +177,10 @@
       border-style: solid;
 
       transition: all 0.3s;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
 
     .img__box {
@@ -155,8 +193,24 @@
       background-color: #ffffff;
       transition: all 0.3s;
       position: relative;
-      // border-radius: 8px;
-      // border: 1px solid #3f3fd74d;
+
+      filter: grayscale(80%);
+
+      @media (max-width: 991px) {
+        border: 8px solid #5a69fa;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 30px auto 0;
+
+        box-shadow: 0px 0px 17px rgba(25, 24, 24, 0.845);
+      }
+
+      @media (max-width: 664px) {
+        margin: 30px auto 0;
+        width: 220px;
+        height: 220px;
+      }
 
       .img {
         display: block;

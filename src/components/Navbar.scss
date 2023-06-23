@@ -68,6 +68,10 @@
 
       transition: all 0.8s;
 
+      @media (max-width: 768px) {
+        width: 80%;
+      }
+
       &.open {
         visibility: visible;
 

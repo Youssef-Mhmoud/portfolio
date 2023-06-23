@@ -15,6 +15,10 @@
     width: fit-content;
     margin: 30px auto;
     line-height: 1.7;
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
   }
 
   .about__box {
@@ -23,6 +27,10 @@
     color: #fff;
 
     opacity: 0;
+
+    @media (max-width: 551px) {
+      width: 70%;
+    }
 
     &.web {
       animation: fadeInLeft 1s 0.5s forwards;
@@ -41,6 +49,10 @@
       opacity: 0;
 
       animation: fadeIn 1s forwards;
+
+      @media (max-width: 551px) {
+        font-size: 28px;
+      }
 
       &::after {
         content: "";

@@ -34,7 +34,9 @@ const Home = () => {
           <button className="btn btn__contact">
             <Link to="contact">Contact Me</Link>
           </button>
-          <button className="btn btn__cv">Upload Resume</button>
+          <a href="/ahmed-ashraf-cv.pdf " download className="btn btn__cv">
+            My Resume
+          </a>
         </div>
       </div>
       <div className="img__container">
