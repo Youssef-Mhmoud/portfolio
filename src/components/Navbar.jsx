@@ -47,7 +47,7 @@ const Navbar = () => {
           </li>
           <li className="contact">
             <NavLink to="contact" onClick={() => setHideMenu(false)}>
-              Contact Us
+              Contact Me
             </NavLink>
           </li>
         </ul>

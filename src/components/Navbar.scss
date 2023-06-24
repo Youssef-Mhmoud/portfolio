@@ -3,10 +3,21 @@
   align-items: center;
   justify-content: space-between;
 
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+
+  // background-color: #33343648;
+  // box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.01);
+
+  // z-index: 1;
+
   padding: 20px 40px;
 
   .logo {
     a {
+      text-transform: uppercase;
       background: -webkit-linear-gradient(30deg, #646fcb, #898fc9);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -15,7 +26,7 @@
   }
 
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,6 +39,7 @@
 
   .nav {
     .btn__menu-open {
+      display: none;
       font-size: 28px;
       color: #7397ff;
       cursor: pointer;
@@ -37,49 +49,54 @@
       &:hover {
         transform: rotate(-90deg);
       }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     .nav__lists {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
       gap: 32px;
-      background-color: #2e2c2cdc;
-      backdrop-filter: blur(10px);
-
-      width: 50%;
-      height: 50vh;
-      border-radius: 8px;
-
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%);
 
       list-style: none;
-
-      padding: 20px;
-
-      z-index: 1;
-
-      opacity: 0;
-      visibility: hidden;
-
       transition: all 0.8s;
 
+      // Mobile
       @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        background-color: #2e2c2cdc;
+        backdrop-filter: blur(10px);
+
+        width: 50%;
+        height: 50vh;
+        border-radius: 8px;
+
+        position: fixed;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+
+        padding: 20px;
+
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+
         width: 80%;
-      }
 
-      &.open {
-        visibility: visible;
+        &.open {
+          visibility: visible;
 
-        opacity: 1;
-        left: 50%;
+          opacity: 1;
+          left: 50%;
+        }
       }
 
       .btn__menu-close {
+        display: none;
         position: absolute;
         top: 30px;
         right: 30px;
@@ -89,6 +106,10 @@
         font-size: 24px;
 
         cursor: pointer;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
       }
 
       li {
@@ -98,6 +119,10 @@
           color: #7397ff;
 
           transition: all 0.3s;
+
+          @media (min-width: 768px) {
+            font-size: 20px !important;
+          }
           &:hover {
             color: #fff;
           }

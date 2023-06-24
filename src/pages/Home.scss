@@ -18,7 +18,7 @@
   }
 
   @media (max-width: 664px) {
-    gap: 0px;
+    gap: 12px;
   }
 
   .info {
@@ -67,7 +67,7 @@
 
     .btns__box {
       display: flex;
-      align-items: center;
+      // align-items: center;
       gap: 24px;
 
       @media (max-width: 991px) {
@@ -136,6 +136,11 @@
     animation: fadeIn 1s 5s forwards;
 
     transition: all 0.3s;
+
+    @media (max-width: 664px) {
+      width: 300px;
+      height: 280px;
+    }
 
     // &:hover::after {
     //   transform: rotateX(-180deg) translateY(-120%);
