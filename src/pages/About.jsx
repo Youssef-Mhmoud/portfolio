@@ -30,7 +30,7 @@ const About = ({ padding }) => {
             in data science <br /> and I have many skills such as:
           </p>
 
-          <motion.div
+          {/* <motion.div
             animate={viewAnimation}
             transition={{ duration: 1 }}
             layout
@@ -42,11 +42,11 @@ const About = ({ padding }) => {
                 creative mindset
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             animate={viewAnimation}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 1 }}
             layout
           >
             <div className="about__box data">
@@ -60,7 +60,7 @@ const About = ({ padding }) => {
 
           <motion.div
             animate={viewAnimation}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.4 }}
             layout
           >
             <div className="about__box enter">

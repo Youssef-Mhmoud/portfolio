@@ -128,9 +128,20 @@
         a {
           font-size: 32px;
           text-decoration: none;
-          color: #7397ff;
 
           transition: all 0.3s;
+
+          .app & {
+            color: #2547ad;
+
+            @media (max-width: 768px) {
+              color: #7397ff;
+            }
+          }
+
+          .dark & {
+            color: #7397ff;
+          }
 
           @media (min-width: 768px) {
             font-size: 20px !important;
@@ -139,6 +150,10 @@
           font-weight: 600;
           &:hover {
             color: #fff;
+
+            .dark & {
+              color: #fff !important;
+            }
 
             .app & {
               color: #000000ad;

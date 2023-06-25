@@ -50,7 +50,7 @@ const Home = () => {
                   .typeString("Hello, I'm Ahmed")
                   .pauseFor(100)
                   .typeString(
-                    "<br /> <h2 class='job__title'>Software Engineer</h2> <br />"
+                    "<br /> <h2 class='job__title'>Data Scientist</h2> <br />"
                   )
                   .pauseFor(100)
                   .typeString(
