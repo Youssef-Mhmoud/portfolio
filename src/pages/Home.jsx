@@ -5,12 +5,52 @@ import { Link } from "react-router-dom";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Loader from "../components/Loader";
+import Footer from "./Footer";
+import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
+  const animation = useAnimation();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        animation.start({
+          x: 0,
+          opacity: 1,
+          transition: { duration: 0.5 },
+        });
+      }
+      if (window.scrollY < 150) {
+        animation.start({
+          x: "20vw",
+          opacity: 0,
+          transition: { duration: 0.5 },
+        });
+      }
+    });
+  }, [animation]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
+      <motion.div
+        animate={animation}
+        className="scroll__to__top-btn"
+        onClick={scrollToTop}
+      >
+        <FontAwesomeIcon icon={faAngleUp} />
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -57,6 +97,7 @@ const Home = () => {
         <About padding="80px" />
         <Projects padding="80px" />
         <Contact padding="50px" />
+        <Footer />
       </motion.div>
       <Loader />
     </>

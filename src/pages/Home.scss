@@ -217,3 +217,20 @@
     }
   }
 }
+
+.scroll__to__top-btn {
+  background-color: #5a69fa;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  z-index: 10;
+
+  cursor: pointer;
+}
