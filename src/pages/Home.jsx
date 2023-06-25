@@ -11,20 +11,27 @@ import Footer from "./Footer";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const Home = () => {
+  const [scrollUp, setScrollUp] = useState(false);
   const animation = useAnimation();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 150) {
+        setScrollUp(true);
+
         animation.start({
           x: 0,
           opacity: 1,
           transition: { duration: 0.5 },
         });
       }
+
       if (window.scrollY < 150) {
+        setScrollUp(false);
+
         animation.start({
           x: "20vw",
           opacity: 0,
@@ -32,7 +39,7 @@ const Home = () => {
         });
       }
     });
-  }, [animation]);
+  }, [animation, setScrollUp]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -44,7 +51,7 @@ const Home = () => {
   return (
     <>
       <motion.div
-        animate={animation}
+        animate={scrollUp ? animation : { x: "20vw" }}
         className="scroll__to__top-btn"
         onClick={scrollToTop}
       >
