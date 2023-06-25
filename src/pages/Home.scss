@@ -27,9 +27,16 @@
     }
 
     .name {
-      color: #fff;
       font-size: 32px;
       letter-spacing: 1.25px;
+
+      .app & {
+        color: #000000c7;
+      }
+
+      .dark & {
+        color: #fff;
+      }
 
       @media (max-width: 664px) {
         font-size: 28px;
@@ -49,10 +56,17 @@
 
     .second__title {
       font-size: 24px;
-      color: #fff;
       font-weight: 600;
       margin-top: 10px;
       display: inline-block;
+
+      .app & {
+        color: #000000c7;
+      }
+
+      .dark & {
+        color: #fff;
+      }
 
       @media (max-width: 664px) {
         font-size: 22px;
@@ -112,10 +126,17 @@
         &.btn__cv {
           border-radius: 8px;
           border: 2px solid #0fd875;
-          color: #fff;
           text-decoration: none;
 
           transition: all 0.3s;
+
+          .app & {
+            color: #000000da;
+          }
+
+          .dark & {
+            color: #fff;
+          }
 
           &:hover {
             background-color: #0fd875;
@@ -185,9 +206,17 @@
 
       box-shadow: -32px 30px 2px 0px rgba(25, 24, 24, 0.56862);
 
-      background-color: #ffffff;
+      // background-color: #ffffff;
       transition: all 0.3s;
       position: relative;
+
+      .app & {
+        background-color: #c4b7b73d;
+      }
+
+      .dark & {
+        background-color: #ffffff;
+      }
 
       @media (max-width: 991px) {
         border: 8px solid #5a69fa;

@@ -1,13 +1,20 @@
 .about__page {
   .about__title {
     font-size: 42px;
-    color: #9bbdff;
     width: fit-content;
     margin: 30px auto;
     padding: 0 10px;
     text-transform: uppercase;
 
     position: relative;
+
+    .app & {
+      color: #5a69fa;
+    }
+
+    .dark & {
+      color: #9bbdff;
+    }
 
     &::after {
       content: "";
@@ -27,7 +34,14 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background-color: #9bbdff;
+
+      .app & {
+        background-color: #5a69fa;
+      }
+
+      .dark & {
+        background-color: #9bbdff;
+      }
     }
   }
 
@@ -107,6 +121,14 @@
       font-size: 18px;
       margin-top: 15px;
       line-height: 1.7;
+
+      .app & {
+        color: #000000de;
+      }
+
+      .dark & {
+        color: #fff;
+      }
     }
   }
 }

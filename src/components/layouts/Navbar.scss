@@ -17,11 +17,21 @@
 
   .logo {
     a {
-      text-transform: uppercase;
-      background: -webkit-linear-gradient(30deg, #646fcb, #898fc9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
+      .app & {
+        background: -webkit-linear-gradient(30deg, #646fcb, #3843a4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .dark & {
+        background: -webkit-linear-gradient(30deg, #646fcb, #898fc9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -125,12 +135,32 @@
           @media (min-width: 768px) {
             font-size: 20px !important;
           }
+
+          font-weight: 600;
           &:hover {
             color: #fff;
+
+            .app & {
+              color: #000000ad;
+
+              @media (max-width: 768px) {
+                color: #fff;
+              }
+            }
           }
 
           &.active {
-            color: #fff;
+            .app & {
+              color: #000000ad;
+
+              @media (max-width: 768px) {
+                color: #fff;
+              }
+            }
+
+            .dark & {
+              color: #fff;
+            }
           }
         }
       }

@@ -1,12 +1,25 @@
 .footer {
-  border-top: 1px solid #ffffff44;
   padding: 20px;
   width: 80%;
   margin: 40px auto 0;
   text-align: center;
 
+  .app & {
+    border-top: 1px solid rgba(30, 28, 28, 0.267);
+  }
+
+  .dark & {
+    border-top: 1px solid #ffffff44;
+  }
+
   h4 {
-    color: #fff;
+    .app & {
+      color: #000000de;
+    }
+
+    .dark & {
+      color: #fff;
+    }
 
     span {
       font-weight: 700;
