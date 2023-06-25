@@ -46,11 +46,18 @@
   }
 
   .brief {
-    color: #fff;
     font-size: 18px;
     width: fit-content;
     margin: 30px auto;
     line-height: 1.7;
+
+    .app & {
+      color: #000000de;
+    }
+
+    .dark & {
+      color: #fff;
+    }
 
     @media (max-width: 768px) {
       padding: 0 24px;
