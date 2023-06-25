@@ -11,6 +11,7 @@ import {
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import Loader from "../components/Loader";
 
 // eslint-disable-next-line react/prop-types
 const Contact = ({ padding }) => {
@@ -36,61 +37,69 @@ const Contact = ({ padding }) => {
   }, [animation, inView]);
 
   return (
-    <div className="contact__page" style={{ paddingTop: padding }} ref={ref}>
-      <h2 className={`contact__title ${inView && 'active__title'}`}>Contact Me</h2>
-      <div className="social">
-        <motion.div animate={animation} transition={{ duration: 1 }}>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <p>Email</p>
+    <>
+      <div className="contact__page" style={{ paddingTop: padding }} ref={ref}>
+        <h2 className={`contact__title ${inView && "active__title"}`}>
+          Contact Me
+        </h2>
+        <div className="social">
+          <motion.div animate={animation} transition={{ duration: 1 }}>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <p>Email</p>
+              </div>
+              <a href="mailto:a.a.elghawas@gmail.com">
+                {" "}
+                a.a.elghawas@gmail.com
+              </a>
             </div>
-            <a href="mailto:a.a.elghawas@gmail.com"> a.a.elghawas@gmail.com</a>
-          </div>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faWhatsapp} />
-              <p>WhatsApp</p>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faWhatsapp} />
+                <p>WhatsApp</p>
+              </div>
+              <a href="tel:01017949739">01017949739</a>
             </div>
-            <a href="tel:01017949739">01017949739</a>
-          </div>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faLinkedinIn} />
-              <p>LinkedIn</p>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faLinkedinIn} />
+                <p>LinkedIn</p>
+              </div>
+              <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
+                Ahmed Ashraf
+              </a>
             </div>
-            <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
-              Ahmed Ashraf
-            </a>
-          </div>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faGithub} />
-              <p>Github</p>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faGithub} />
+                <p>Github</p>
+              </div>
+              <a href="https://github.com/Ahmed-Ashraf-Marzouk">
+                Ahmed Ashraf Marzouk
+              </a>
             </div>
-            <a href="https://github.com/Ahmed-Ashraf-Marzouk">
-              Ahmed Ashraf Marzouk
-            </a>
-          </div>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faFacebook} />
-              <p>Facebook</p>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faFacebook} />
+                <p>Facebook</p>
+              </div>
+              <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
+                Ahmed Ashraf{" "}
+              </a>
             </div>
-            <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
-              Ahmed Ashraf{" "}
-            </a>
-          </div>
-          <div className="social__box">
-            <div>
-              <FontAwesomeIcon icon={faYoutube} />
-              <p>Youtube</p>
+            <div className="social__box">
+              <div>
+                <FontAwesomeIcon icon={faYoutube} />
+                <p>Youtube</p>
+              </div>
+              <a href="https://www.youtube.com/@a.a.elghawas">Ahmed Ashraf </a>
             </div>
-            <a href="https://www.youtube.com/@a.a.elghawas">Ahmed Ashraf </a>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+      <Loader />
+    </>
   );
 };
 

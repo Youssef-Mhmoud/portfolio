@@ -142,17 +142,6 @@
       height: 280px;
     }
 
-    // &:hover::after {
-    //   transform: rotateX(-180deg) translateY(-120%);
-    // }
-    // &:hover::before {
-    //   transform: rotateX(-180deg) translateY(120%);
-    // }
-
-    &:hover .img__box {
-      filter: grayscale(0);
-    }
-
     &::after {
       content: "";
       position: absolute;
@@ -199,8 +188,6 @@
       background-color: #ffffff;
       transition: all 0.3s;
       position: relative;
-
-      filter: grayscale(80%);
 
       @media (max-width: 991px) {
         border: 8px solid #5a69fa;
