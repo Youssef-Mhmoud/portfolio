@@ -38,6 +38,8 @@
   }
 
   .nav {
+    display: flex;
+    gap: 24px;
     .btn__menu-open {
       display: none;
       font-size: 28px;

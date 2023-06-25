@@ -49,17 +49,18 @@
       padding: 10px;
       border-radius: 8px;
       opacity: 0;
+      transform: translateY(50%);
 
       &.egfwd {
-        animation: fadeInUp 1s 0.5s forwards;
+        animation: fadeUP 1s 0.5s forwards;
       }
 
       &.wagba {
-        animation: fadeInUp 1s 1s forwards;
+        animation: fadeUP 1s 1s forwards;
       }
 
       &.doc {
-        animation: fadeInUp 1s 1.5s forwards;
+        animation: fadeUP 1s 1.5s forwards;
       }
 
       img {
@@ -97,5 +98,14 @@
         }
       }
     }
+  }
+}
+
+// Animation
+
+@keyframes fadeUP {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

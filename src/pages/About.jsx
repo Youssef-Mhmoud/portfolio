@@ -1,7 +1,7 @@
-import "./About.scss";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import "./About.scss";
+import { motion } from "framer-motion";
+
 import Loader from "../components/Loader";
 
 // eslint-disable-next-line react/prop-types
@@ -10,22 +10,11 @@ const About = ({ padding }) => {
     threshold: 0.4,
   });
 
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        x: "-100vw",
-        opacity: 0,
-        transition: { duration: 1 },
-      });
-    }
-  }, [animation, inView]);
+  const viewAnimation = () => {
+    return inView
+      ? { x: 0, opacity: 1 }
+      : { x: "-100%", opacity: 0, transition: { duration: 1 } };
+  };
 
   return (
     <>
@@ -41,7 +30,11 @@ const About = ({ padding }) => {
             in data science <br /> and I have many skills such as:
           </p>
 
-          <motion.div animate={animation} transition={{ duration: 1 }}>
+          <motion.div
+            animate={viewAnimation}
+            transition={{ duration: 1 }}
+            layout
+          >
             <div className="about__box web">
               <h2>Web development</h2>
               <p>
@@ -52,8 +45,9 @@ const About = ({ padding }) => {
           </motion.div>
 
           <motion.div
-            animate={animation}
+            animate={viewAnimation}
             transition={{ duration: 1, delay: 0.4 }}
+            layout
           >
             <div className="about__box data">
               <h2>Data science</h2>
@@ -65,8 +59,9 @@ const About = ({ padding }) => {
           </motion.div>
 
           <motion.div
-            animate={animation}
+            animate={viewAnimation}
             transition={{ duration: 1, delay: 0.8 }}
+            layout
           >
             <div className="about__box enter">
               <h2>Entrepreneurship</h2>

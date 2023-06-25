@@ -8,9 +8,8 @@ import {
   faWhatsapp,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 import Loader from "../components/Loader";
 
 // eslint-disable-next-line react/prop-types
@@ -19,22 +18,11 @@ const Contact = ({ padding }) => {
     threshold: 0.4,
   });
 
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        x: "100vw",
-        opacity: 0,
-        transition: { duration: 1 },
-      });
-    }
-  }, [animation, inView]);
+  const viewAnimation = () => {
+    return inView
+      ? { x: 0, opacity: 1 }
+      : { x: "-100vw", opacity: 0, transition: { duration: 1 } };
+  };
 
   return (
     <>
@@ -43,7 +31,7 @@ const Contact = ({ padding }) => {
           Contact Me
         </h2>
         <div className="social">
-          <motion.div animate={animation} transition={{ duration: 1 }}>
+          <motion.div animate={viewAnimation} transition={{ duration: 1 }}>
             <div className="social__box">
               <div>
                 <FontAwesomeIcon icon={faEnvelope} />

@@ -3,8 +3,8 @@ import egfwdImg from "../assets/Egfwd.png";
 import docsImg from "../assets/google-docs-clone.png";
 import wagbaImg from "../assets/wagba.png";
 import { useInView } from "react-intersection-observer";
-import { useAnimation, motion } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+
 import Loader from "../components/Loader";
 
 // eslint-disable-next-line react/prop-types
@@ -13,22 +13,11 @@ const Projects = ({ padding }) => {
     threshold: 0.4,
   });
 
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        y: "30vh",
-        opacity: 0,
-        transition: { duration: 0.5 },
-      });
-    }
-  }, [animation, inView]);
+  const viewAnimation = () => {
+    return inView
+      ? { scale: 1, opacity: 1 }
+      : { scale: 0, opacity: 0, transition: { duration: 0.5 } };
+  };
 
   return (
     // <motion.div
@@ -47,7 +36,7 @@ const Projects = ({ padding }) => {
           Projects
         </h2>
         <div className="projects__boxes">
-          <motion.div animate={animation} transition={{ duration: 1 }}>
+          <motion.div animate={viewAnimation} transition={{ duration: 1 }}>
             <div className="project__box egfwd">
               <img src={egfwdImg} alt="web application" />
               <h4>E-COMMERCE</h4>
@@ -62,8 +51,8 @@ const Projects = ({ padding }) => {
             </div>
           </motion.div>
           <motion.div
-            animate={animation}
-            transition={{ duration: 1, delay: 0.4 }}
+            animate={viewAnimation}
+            transition={{ duration: 1, delay: 0.3 }}
           >
             <div className="project__box wagba">
               <img src={wagbaImg} alt="android application" />
@@ -79,8 +68,8 @@ const Projects = ({ padding }) => {
             </div>
           </motion.div>
           <motion.div
-            animate={animation}
-            transition={{ duration: 1, delay: 0.8 }}
+            animate={viewAnimation}
+            transition={{ duration: 1, delay: 0.6 }}
           >
             <div className="project__box doc">
               <img src={docsImg} alt="web application" />

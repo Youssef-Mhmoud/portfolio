@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import DarkMode from "../DarkMode";
 
 const Navbar = () => {
   const [hideMenu, setHideMenu] = useState(false);
@@ -15,6 +16,7 @@ const Navbar = () => {
         </h1>
       </div>
       <nav className="nav">
+        <DarkMode />
         <FontAwesomeIcon
           icon={faBars}
           className="btn__menu-open"
