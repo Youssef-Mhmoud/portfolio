@@ -37,14 +37,14 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className="about">
-            <NavLink to="about" onClick={() => setHideMenu(false)}>
-              About
-            </NavLink>
-          </li>
           <li className="project">
             <NavLink to="projects" onClick={() => setHideMenu(false)}>
               Projects
+            </NavLink>
+          </li>
+          <li className="about">
+            <NavLink to="about" onClick={() => setHideMenu(false)}>
+              Domains
             </NavLink>
           </li>
           <li className="contact">

@@ -77,8 +77,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <About padding="80px" />
       <Projects padding="80px" />
+      <About padding="80px" />
       <Contact padding="50px" />
       <Footer />
 

@@ -23,7 +23,7 @@ const About = ({ padding }) => {
         ref={ref}
         style={{ paddingTop: padding, paddingBottom: padding }}
       >
-        <h2 className={`about__title ${inView && "active__title"}`}>About</h2>
+        <h2 className={`about__title ${inView && "active__title"}`}>Domains</h2>
         <div className="about__info">
           <p className="brief">
             I am a computer engineering student at Ain Shams University majoring
