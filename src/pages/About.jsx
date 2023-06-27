@@ -26,8 +26,8 @@ const About = ({ padding }) => {
         <h2 className={`about__title ${inView && "active__title"}`}>Domains</h2>
         <div className="about__info">
           <p className="brief">
-            I am a computer engineering student at Ain Shams University majoring
-            in data science <br /> and I have many skills such as:
+            I am a fresh graduate computer engineer from Ain Shams University
+            majoring in data science
           </p>
 
           {/* <motion.div

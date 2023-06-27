@@ -125,23 +125,29 @@
 
         &.btn__cv {
           border-radius: 8px;
-          border: 2px solid #0fd875;
           text-decoration: none;
 
           transition: all 0.3s;
 
           .app & {
+            border: 2px solid #cddc39;
+
             color: #000000da;
+
+            &:hover {
+              background-color: #cddc39;
+            }
           }
 
           .dark & {
+            border: 2px solid #ffeb3b;
             color: #fff;
-          }
 
-          &:hover {
-            background-color: #0fd875;
+            &:hover {
+              background-color: #ffeb3b;
 
-            color: #000;
+              color: #000;
+            }
           }
         }
       }
@@ -175,6 +181,7 @@
       border-style: solid;
 
       transition: all 0.3s;
+      z-index: -1;
 
       @media (max-width: 991px) {
         display: none;
@@ -206,9 +213,9 @@
 
       box-shadow: -32px 30px 2px 0px rgba(25, 24, 24, 0.56862);
 
-      // background-color: #ffffff;
       transition: all 0.3s;
       position: relative;
+      z-index: 1;
 
       .app & {
         background-color: #c4b7b73d;

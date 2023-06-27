@@ -32,56 +32,46 @@ const Contact = ({ padding }) => {
         </h2>
         <div className="social">
           <motion.div animate={viewAnimation} transition={{ duration: 1 }}>
-            <div className="social__box">
-              <div>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <p>Email</p>
+            <div className="social__box email__col">
+              <div className="flex__col">
+                <div>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <p>Email</p>
+                </div>
+                <a href="mailto:a.a.elghawas@gmail.com">
+                  {" "}
+                  a.a.elghawas@gmail.com
+                </a>
               </div>
-              <a href="mailto:a.a.elghawas@gmail.com">
-                {" "}
-                a.a.elghawas@gmail.com
-              </a>
-            </div>
-            <div className="social__box">
-              <div>
-                <FontAwesomeIcon icon={faWhatsapp} />
-                <p>WhatsApp</p>
+              <div className="flex__col">
+                <div>
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <p>WhatsApp</p>
+                </div>
+                <a href="tel:01017949739">01017949739</a>
               </div>
-              <a href="tel:01017949739">01017949739</a>
             </div>
-            <div className="social__box">
-              <div>
+            <div className="social__box flex">
+              <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
                 <FontAwesomeIcon icon={faLinkedinIn} />
                 <p>LinkedIn</p>
-              </div>
-              <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
-                Ahmed Ashraf
               </a>
-            </div>
-            <div className="social__box">
-              <div>
+
+              <a href="https://github.com/Ahmed-Ashraf-Marzouk">
                 <FontAwesomeIcon icon={faGithub} />
                 <p>Github</p>
-              </div>
-              <a href="https://github.com/Ahmed-Ashraf-Marzouk">
-                Ahmed Ashraf Marzouk
               </a>
             </div>
-            <div className="social__box">
-              <div>
+            <div className="social__box flex">
+              <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
                 <FontAwesomeIcon icon={faFacebook} />
                 <p>Facebook</p>
-              </div>
-              <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
-                Ahmed Ashraf{" "}
               </a>
-            </div>
-            <div className="social__box">
-              <div>
+
+              <a href="https://www.youtube.com/@a.a.elghawas">
                 <FontAwesomeIcon icon={faYoutube} />
                 <p>Youtube</p>
-              </div>
-              <a href="https://www.youtube.com/@a.a.elghawas">Ahmed Ashraf </a>
+              </a>
             </div>
           </motion.div>
         </div>

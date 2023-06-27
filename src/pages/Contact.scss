@@ -63,9 +63,45 @@
 
       margin-bottom: 24px;
 
+      .flex__col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      &.email__col {
+        flex-direction: column;
+        align-items: stretch;
+
+        .flex__col {
+          justify-content: space-between;
+        }
+      }
+
       @media (max-width: 480px) {
         width: 300px;
         margin: 24px auto;
+
+        .flex__col {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &.flex {
+          margin-top: 40px;
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          svg {
+            font-size: 32px;
+          }
+        }
       }
 
       div {
@@ -95,18 +131,33 @@
       }
 
       a {
-        display: block;
-        text-decoration: none;
         font-size: 18px;
-        margin-top: 10px;
+        text-decoration: none;
+        // margin-top: 10px;
         transition: all 0.3s;
 
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width: 480px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        p {
+          font-size: 24px;
+        }
         .app & {
-          color: #000000de;
+          color: #4a59dc;
         }
 
         .dark & {
-          color: #fff;
+          color: #7990ff;
+        }
+
+        svg {
+          font-size: 28px;
         }
 
         &:hover {

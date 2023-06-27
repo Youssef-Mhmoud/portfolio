@@ -58,9 +58,21 @@
     .project__box {
       width: 280px;
 
-      background-color: rgba(127, 127, 151, 0.1);
-      box-shadow: 0 0 17px #5355d346;
-      border: 2px solid #5355d3;
+      .app & {
+        // background-color: rgba(248, 248, 248, 0.4);
+        background-color: #5355d3;
+        // box-shadow: 0 5px 17px rgb(90 90 90 / 15%);
+        box-shadow: 0 0px 17px #5355d334;
+        // border: 2px solid #a2a2a263;
+        border: 2px solid #5355d3;
+      }
+
+      .dark & {
+        background-color: rgba(127, 127, 151, 0.1);
+        box-shadow: 0 0 17px #5355d346;
+        border: 2px solid #5355d3;
+      }
+
       padding: 10px;
       border-radius: 8px;
       opacity: 0;
@@ -88,23 +100,23 @@
         font-size: 20px;
         margin: 12px 0;
 
-        .app & {
-          color: #000000de;
-        }
+        // .app & {
+        //   color: #000000de;
+        // }
 
-        .dark & {
-          color: #fff;
-        }
+        // .dark & {
+        // }
+        color: #fff;
       }
 
       p {
-        .app & {
-          color: #000000de;
-        }
+        // .app & {
+        //   color: #000000de;
+        // }
 
-        .dark & {
-          color: #ffffffc2;
-        }
+        // .dark & {
+        // }
+        color: #ffffffd7;
       }
 
       a {
@@ -120,9 +132,21 @@
 
         transition: all 0.3s;
 
-        &:hover {
-          color: #fff;
-          background-color: #3f72d8;
+        .app & {
+          color: #000000de;
+          background-color: #ffeb3b;
+
+          &:hover {
+            color: #000;
+            background-color: #ffeb3bc7;
+          }
+        }
+
+        .dark & {
+          &:hover {
+            color: #fff;
+            background-color: #3f72d8;
+          }
         }
       }
     }
