@@ -51,27 +51,29 @@ const Contact = ({ padding }) => {
                 <a href="tel:01017949739">01017949739</a>
               </div>
             </div>
-            <div className="social__box flex">
-              <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-                <p>LinkedIn</p>
-              </a>
+            <div className="mob__icon">
+              <div className="social__box flex">
+                <a href="https://www.linkedin.com/in/ahmed-ashraf-marzouk/">
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                  <p>LinkedIn</p>
+                </a>
 
-              <a href="https://github.com/Ahmed-Ashraf-Marzouk">
-                <FontAwesomeIcon icon={faGithub} />
-                <p>Github</p>
-              </a>
-            </div>
-            <div className="social__box flex">
-              <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
-                <FontAwesomeIcon icon={faFacebook} />
-                <p>Facebook</p>
-              </a>
+                <a href="https://github.com/Ahmed-Ashraf-Marzouk">
+                  <FontAwesomeIcon icon={faGithub} />
+                  <p>Github</p>
+                </a>
+              </div>
+              <div className="social__box flex">
+                <a href="https://www.facebook.com/ahmed.ashraf.elghawas">
+                  <FontAwesomeIcon icon={faFacebook} />
+                  <p>Facebook</p>
+                </a>
 
-              <a href="https://www.youtube.com/@a.a.elghawas">
-                <FontAwesomeIcon icon={faYoutube} />
-                <p>Youtube</p>
-              </a>
+                <a href="https://www.youtube.com/@a.a.elghawas">
+                  <FontAwesomeIcon icon={faYoutube} />
+                  <p>Youtube</p>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
