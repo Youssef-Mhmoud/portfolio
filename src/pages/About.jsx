@@ -50,7 +50,10 @@ const About = ({ padding }) => {
             layout
           >
             <div className="about__box data">
-              <h2>Data science</h2>
+              <div>
+                <span></span>
+                <h2>Data science</h2>
+              </div>
               <p>
                 Finished Machine Learning Specializationon coursera and worked
                 on +4 classical machine learning projects
@@ -64,7 +67,10 @@ const About = ({ padding }) => {
             layout
           >
             <div className="about__box enter">
-              <h2>Entrepreneurship</h2>
+              <div>
+                <span></span>
+                <h2>Entrepreneurship</h2>
+              </div>
               <p>
                 InnovEgypt program graduate, IHub intern, and worked on +3
                 startup ideas
